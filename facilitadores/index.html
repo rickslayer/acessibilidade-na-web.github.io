@@ -11,12 +11,24 @@
   <body>
     <div class="container">
       <div class="row">
-          <div class="col-sm-6 align-center">
-              <textarea id="tamanho"></textarea>
-          </div>
-          <div class="col-sm-6">
-              <label><h1 id="conta-tamanho"></h1></label>
-          </div>
+      <form>
+           <h1 class='text-center'>FACILITADORES</h1>
+           <h3 class="text-center">CONTA CARACTERES</h3>
+           <div class="input-group">
+                 <textarea id="tamanho" class="form-control" placeholder="Conta caracteres"></textarea>
+                 <span class="input-group-addon">-</span>
+                 <textarea id="conta-tamanho" class="form-control" disabled placeholder="Caracteres"></textarea>
+           </div>
+           <h3 class="text-center">CALCULA PORCENTAGEM</h3>
+            <div class="input-group">
+                 <input id="valor" class="form-control" placeholder="Valor"/>
+                 <span class="input-group-addon">-</span>
+                 <input id="porcentagem" class="form-control" placeholder="% Porcentagem"/>
+                 <span class="input-group-addon">-</span>
+                 <input id="resultado" class="form-control" disabled placeholder="Resultado"/>
+
+           </div>
+      </form>
       </div>
     </div>
   </body>
