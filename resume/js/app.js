@@ -19,6 +19,8 @@ function appResumeController($scope)
 	 $scope.hoverOut = function(){
 	        this.hoverEdit = false;
 	    };
+	    
+	    
 
 	
 }
