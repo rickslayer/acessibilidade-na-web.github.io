@@ -12,5 +12,13 @@
 	"description" : "Buiding Wordpress Themes, backend controller. SVN and Git Version Controlls",
 	"tempo": "June 2015 - June 2016",
 	"urlCompany": "http://www.softlove.com.br"
-	 }          
+	 }    
+	 ,
+	 {
+	"title" : "Senior ERP Consultant",
+	"company" : "Cybersul Software House",
+	"description" : "Provide job trainings and cross trainings to team members on deployment approaches;Provide product implementation trainings to customers as needed;Customize the ERP according to customer's request;Building Business Intelligence Reports;SQL queries,stored procedures and triggers;",
+	"tempo": "June 2015 - June 2016",
+	"urlCompany": "http://www.cybersul.net"
+	 }       
 ]
