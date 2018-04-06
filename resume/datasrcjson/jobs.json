@@ -1,7 +1,16 @@
-	[{
+[
+	{
 	"title" : "Software Developer",
-	"company" : "Intelitec Solutions",
-	"description" : "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.",
-	"tempo": "March 2013 - Present"
-	 }            
+	"company" : "ERPFlex Software House",
+	"description" : "Buiding RESTful APIs, Webservices with Agile PHP Frameworks. SVN and Git Version Controlls",
+	"tempo": "June 2016 - Present",
+	"urlCompany": "http://www.erpflex.com.br"
+	 } ,
+	 {
+	"title" : "FullStack Developer",
+	"company" : "OSS Industry",
+	"description" : "Buiding Wordpress Themes, backend controller. SVN and Git Version Controlls",
+	"tempo": "June 2015 - June 2016",
+	"urlCompany": "http://www.softlove.com.br"
+	 }          
 ]
