@@ -4,11 +4,13 @@ appAbout.controller("appResumeController",appResumeController);
 
 appAbout.controller("appGetJobsController",appGetJobsController);
 
+appAbout.controller("appGetWorkFlow", appGetWorkFlow );
+
 function appResumeController($scope)
 {
 	$scope.nome = "Paulo Ricardo";
 	$scope.sobrenome = "Rube de Almeida";
-	$scope.endereco = "120 · Urias Pithon Barreto Street · Arujá · São Paulo · Brazil · +55 (11) 97508-5586";
+	$scope.endereco = "Arujá · São Paulo · Brazil · +55 (11) 97508-5586";
 	
 	
 	$scope.hoverIn = function (redesocial, valor){
@@ -38,3 +40,22 @@ function appGetJobsController($scope , $http)
 		
 	});
 }
+
+function appGetWorkFlow($scope, $http)
+{
+	var ajax = $http({
+		 method: "GET",
+		 url: "https://rickslayer.github.io/resume/datasrcjson/itensWorkflow.json"
+	});
+	
+		ajax.then(function sucesso(response){
+			
+			var retorno = response.data;
+			
+			$scope.responseData = retorno;
+		});
+
+}
+
+
+

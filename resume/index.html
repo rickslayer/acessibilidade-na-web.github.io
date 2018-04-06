@@ -5,10 +5,15 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Resume - Paulo Ricardo Rube de Almeida</title>
+    <meta name="author" content="aulo Ricardo Rube De Almeida">
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<meta http-equiv="content-style-type" content="text/css">
+	<meta http-equiv="content-language" content="en">
+	<meta name="description" content="I'm Paulo Ricardo Almeida, webdeveloper / creative programmer with good knowledge of front-end.">
+	<meta name="keywords" content="Paulo Ricardo Almeida, Interactive Resume, PHP programmer, Web developer, Startup, Interactive CV, Resume, CV, PHP, MySQL, OOP">
+	<meta name="robots" content="index, follow">
+    
+    <title>Interactive Resume - Paulo Ricardo Rube de Almeida - Web Developer</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,11 +24,9 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet">
-    
-    
   </head>
 
   <body id="page-top" ng-app="appResumeAbout" ng-cloak >
@@ -53,12 +56,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-       <!--<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li> -->
+       <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contacts">Contacts</a>
+          </li> 
         </ul>
       </div>
     </nav>
@@ -68,18 +68,168 @@
       <section  class="resume-section p-3 p-lg-5 d-flex d-column" id="about" ng-controller="appResumeController">
        
         <div class="my-auto">
-          <h1 class="mb-0">{{nome}}
-            <span class="text-primary">{{sobrenome}}</span>
+          <h1 class="mb-0 mb-3">{{nome}}
+            <span class="text-primary ">{{sobrenome}}</span>
           </h1>
+         
+          
+          <h3 class="mb-0"> About Me:</h3>
+          <p class=" mb-5">
+          IT Specialist with over 4+ years of experience in web development. Highly familiar with web development environment. Advanced knowledge of front-end as well.
+          I love Javascript frameworks and create structures with agile design partners. Also I like working in a team to share awesome ideas.  
+          </p>
+           <h3 class="mb-0"> LOCATION:</h3>
           <div class="subheading mb-5">{{endereco}} ·
             <a href="mailto:paulo@actio.net.br">paulo@actio.net.br</a>
           </div>
-          <p class="mb-5">
-          IT Specialist with over 4+ years of experience in development. Highly familiar with web development environment. Possess a Bachelor’s  Degree in Information System. Advanced knowledge of front-end as well.  
-          </p>
-          <p class="mb-5">Familiar with mostly popular Frameworks</p>
           
-          <p class="subheading mb-5">Contacts</p>
+          
+        </div>
+ 		<!-- <b>{{facebook.texto}}</b>-->
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience" ng-controller="appGetJobsController">
+        <div class="my-auto">
+          <h2 class="mb-5">Exper<span class="text-primary">ience</span></h2>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5" ng-repeat='x in responseData'>
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">{{x.title}}</h3>
+              <div class="subheading mb-3"><a href="{{x.urlCompany}}" target="_blank">{{x.company}}</a></div>
+              <p>{{x.description}}</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">{{x.tempo}}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+          <div class="my-auto">
+          <h2 class="mb-5">Educ<span class="text-primary">ation</span></h2>
+          
+            <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Free Online Trainings</h3>
+               <div class="text-primary">Microsoft - AngularJS: Advanced Framework Techniques</div>
+               <div class="text-primary">Microsoft - AngularJS: Framework Fundamentals</div>
+               <div class="text-primary">Microsoft - Introduction Node.js</div>
+              <div class="text-primary"> Udemy - AngularJS MasterClass</div>
+                <div class="text-primary">The Hong Kong University - Front-End Web UI Frameworks and Tools</div>
+                <div class="text-primary mb-3">Microsoft MVA - HTML5</div>
+            </div>
+          </div>
+          
+           <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Tata Consuntancy Services</h3>
+               <div class="subheading mb-3">ITIL , SAP and Oracle EBS</div>
+            </div>
+              <div class="resume-date text-md-right">
+              <span class="text-primary">May 2016 - June 2016</span>
+            </div>
+          </div>
+          
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">UNIP - University Paulista</h3>
+              <div class="subheading mb-3">Bachelor of System Information</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">January 2010 - December 2013</span>
+            </div>
+          </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">LANGUAGES</h3>
+              <div class="text-primary">Portuguese-BR First Language</div>
+              <div class="text-primary">English Conversation Level</div>
+              <div class="text-primary">Spanish Conversation Level</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" ng-controller="appResumeController">
+        <div class="my-auto">
+          <h2 class="mb-5">Ski<span class="text-primary">lls</span></h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+           <li class="list-inline-item"  ng-mouseover="hoverIn('tools', 'Linux Intusiastic')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-linux"></i>
+            </li>
+            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'HTML5 Proficient')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-html5"></i>
+            </li>
+            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'CSS3 Proficient')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-css3"></i>
+            </li>
+            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Javascript Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-javascript"></i>
+            </li>
+            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Jquery Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-jquery"></i>
+            </li>
+             <li class="list-inline-item"ng-mouseover="hoverIn('tools', 'AngularJS Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-angular"></i>
+            </li>
+            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'BootStrap Proficient')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-bootstrap"></i>
+            </li>
+           <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'PHP 5 & PHP 7')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-php"></i>
+            </li>
+            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'WordPress Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-wordpress"></i>
+            </li>
+             <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Laravel Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-laravel"></i>
+            </li>
+              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Mysql Proficient')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-mysql"></i>
+            </li>
+            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'NPM Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-npm"></i>
+            </li>
+              <li class="list-inline-item"ng-mouseover="hoverIn('tools', 'Composer Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-composer"></i>
+            </li>
+             <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Bower Medium Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-bower"></i>
+            </li>
+             <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Git Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-git"></i>
+            </li>
+              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'PhotoShop Advanced Level')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-photoshop"></i>
+            </li>
+              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Jira Workflow')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-jira"></i>
+            </li>
+              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'SCRUM Methodology')" ng-mouseleave="hoverOut()">
+              <i class="devicons devicons-scrum"></i>
+            </li>
+             <li ng-show="hoverEdit" class="list-inline-item text-primary animate-show">
+           	   <i class="fa-li fa fa-check" ></i>
+          		 <code>  {{socials.tools}}</code>
+             </li>
+          </ul>
+
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0" ng-controller = "appGetWorkFlow">
+            <li ng-repeat="x in responseData">
+              <i class="fa-li fa fa-check"></i>
+            	 {{x.item}}
+             </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contacts" ng-controller="appResumeController">
+          <h2 class="mb-5">Cont<span class="text-primary">acts</span></h2>
           <ul class="list-inline list-social-icons mb-0">
             
             <li class="list-inline-item">
@@ -149,184 +299,8 @@
                  <code> {{socials.skype}}</code>
                 </span> 
           </ul>
-         
-        </div>
- 		<b>{{facebook.texto}}</b>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience" ng-controller="appGetJobsController">
-        <div class="my-auto">
-          <h2 class="mb-5">Exper<span class="text-primary">ience</span></h2>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5" ng-repeat='x in responseData'>
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">{{x.title}}</h3>
-              <div class="subheading mb-3"><a href="{{x.urlCompany}}" target="_blank">{{x.company}}</a></div>
-              <p>{{x.description}}</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">{{x.tempo}}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Educa<span class="text-primary">tion</span></h2>
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">UNIP - University Paulista</h3>
-              <div class="subheading mb-3">Bachelor of System Information</div>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">January 2010 - December 2013</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Free Trainings</h3>
-               <div class="text-primary">Microsoft - AngularJS: Advanced Framework Techniques</div>
-               <div class="text-primary">Microsoft - AngularJS: Framework Fundamentals</div>
-               <div class="text-primary">Microsoft - Introduction Node.js</div>
-              <div class="text-primary"> Udemy - AngularJS MasterClass</div>
-                <div class="text-primary">The Hong Kong University - Front-End Web UI Frameworks and Tools</div>
-                <div class="text-primary">Microsoft MVA - HTML5</div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills" ng-controller="appResumeController">
-        <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <ul class="list-inline list-icons">
-           <li class="list-inline-item"  ng-mouseover="hoverIn('tools', 'Linux Intusiastic')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-linux"></i>
-            </li>
-            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'HTML5 Proficient')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-html5"></i>
-            </li>
-            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'CSS3 Proficient')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-css3"></i>
-            </li>
-            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Javascript Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-javascript"></i>
-            </li>
-            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Jquery Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-jquery"></i>
-            </li>
-             <li class="list-inline-item"ng-mouseover="hoverIn('tools', 'AngularJS Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-angular"></i>
-            </li>
-            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'BootStrap Proficient')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-bootstrap"></i>
-            </li>
-           <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'PHP 5 & PHP 7')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-php"></i>
-            </li>
-            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'WordPress Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-wordpress"></i>
-            </li>
-             <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Laravel Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-laravel"></i>
-            </li>
-              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Mysql Proficient')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-mysql"></i>
-            </li>
-            <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'NPM Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-npm"></i>
-            </li>
-              <li class="list-inline-item"ng-mouseover="hoverIn('tools', 'Composer Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-composer"></i>
-            </li>
-             <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Bower Medium Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-bower"></i>
-            </li>
-             <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Git Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-git"></i>
-            </li>
-              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'PhotoShop Advanced Level')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-photoshop"></i>
-            </li>
-              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'Jira Experiences')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-jira"></i>
-            </li>
-              <li class="list-inline-item" ng-mouseover="hoverIn('tools', 'SCRUM Methodology')" ng-mouseleave="hoverOut()">
-              <i class="devicons devicons-scrum"></i>
-            </li>
-             <li ng-show="hoverEdit" class="list-inline-item text-primary animate-show">
-           	   <i class="fa-li fa fa-check" ></i>
-          		   {{socials.tools}}
-             </li>
-          </ul>
-
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-            
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Functional Teams</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-             
-          </ul>
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-          <h2 class="mb-5">Interests</h2>
-          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
-        </div>
-      </section>
-
-   <!--    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
-          <h2 class="mb-5">Awards &amp; Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Google Analytics Certified Developer</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              Mobile Web Specialist - Google Certification</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              2<sup>nd</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-            <li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              1<sup>st</sup>
-              Place - James Buchanan High School - Hackathon 2006</li>
-            <li>
-              <i class="fa-li fa fa-trophy text-warning"></i>
-              3<sup>rd</sup>
-              Place - James Buchanan High School - Hackathon 2005</li>
-          </ul>
-        </div>
-      </section> -->
-
+          <h1 class="subheading mb-3">  Fell free to get in touch!</h1>
+      </section> 
     </div>
 
     <!-- Bootstrap core JavaScript -->
