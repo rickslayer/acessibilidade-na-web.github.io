@@ -2,6 +2,8 @@ var appAbout = angular.module('appResumeAbout', ['ngMaterial', 'ngMessages', 'ng
 
 appAbout.controller("appResumeController",appResumeController);
 
+appAbout.controller("appGetJobsController",appGetJobsController);
+
 function appResumeController($scope)
 {
 	$scope.nome = "Paulo Ricardo";
@@ -19,8 +21,20 @@ function appResumeController($scope)
 	 $scope.hoverOut = function(){
 	        this.hoverEdit = false;
 	    };
-	    
-	    
+}
 
+function appGetJobsController($scope , $http)
+{
+	var ajax = $http({
+				method: "GET",
+				url: "https://rickslayer.github.io/resume/datasrcjson/jobs.json"
+	});
 	
+	ajax.then(function sucesso(response){
+		
+		var retorno = response.data;
+		
+		$scope.responseData = retorno;
+		
+	});
 }
