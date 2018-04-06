@@ -1,10 +1,11 @@
 [
-	{"item" : "RESTful APIs with Laravel"},
+	{"item" : "RESTFUL APIs with Laravel"},
 	{"item" : "SOLID and MVC Design Patterns"},
 	{"item" : "Git and SVN Version Controls"},
 	{"item" : "Mobile-First, Responsive Design"},
-    {"item" : "Cross Browser Testing &amp; Debugging"},
+    {"item" : "Cross Browser Testing & Debugging"},
     {"item" : "Cross Functional Teams"},
-    {"item" : "Agile Development & Scrum"}
-
+    {"item" : "Agile Development & Scrum"},
+    {"item" : "MySQL and Firebird Databases"},
+    {"item" : "ERP Specialist"}
 ]
