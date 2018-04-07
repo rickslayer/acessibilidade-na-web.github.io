@@ -3,7 +3,16 @@
     <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
     <script type="text/javascript">
       var verifyCallback = function(response) {
-        console.log(response);
+    	  var data;
+        if(response)
+        	{
+        		data = {
+        				"key" : response,
+        				"success" : true,
+        				"message": "Validou com sucesso"
+        		}
+        		console.log(data);
+        	}
       };
       var onloadCallback = function() {
           grecaptcha.render('example3', {
