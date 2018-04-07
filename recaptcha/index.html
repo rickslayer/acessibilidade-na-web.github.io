@@ -13,8 +13,21 @@
         				"success" : true,
         				"message": "Validou com sucesso"
         		}
-        		console.log(data.success);
+        		
+        		if(data.success)
+        			{
+        				resultado.innerHTML = data.message;
+        				btn.addEventListener('click', function(){
+        					
+        					alert(data.message);
+        				})  ;      				
+        			}
+        		
         	}
+        
+               
+        
+        
       };
       var onloadCallback = function() {
           grecaptcha.render('captcha_elemento', {
