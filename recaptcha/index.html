@@ -17,6 +17,7 @@
         		if(data.success)
         			{
         				resultado.innerHTML = data.message;
+        				btn.removeAttribute('disabled');
         				btn.addEventListener('click', function(){
         					
         					alert(data.message);
@@ -44,7 +45,7 @@
        
       <div id="captcha_elemento"></div>
       <h1 id="resultado"></h1>	
-      <button id="btn_envia">Enviar para o Servidor</button>
+      <button id="btn_envia" disabled>Enviar para o Servidor</button>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
         async defer>
     </script>
