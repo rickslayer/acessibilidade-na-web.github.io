@@ -8,6 +8,13 @@
 	 } ,
 	 {
 	"title" : "Web Developer",
+	"company" : "Actio Comunication",
+	"description" : "Create and maintenance awesome websites and e-commerces.",
+	"tempo": "June 2013 - Present",
+	"urlCompany": "http://www.actio.net.br"
+	 } ,
+	 {
+	"title" : "Web Developer",
 	"company" : "OSS Industry",
 	"description" : "Buiding Wordpress Themes. Create responsible Websites. I improved the current website and re-factored the code. I also created a brand new back-end system. I also created social media content and ads campaign",
 	"tempo": "June 2015 - June 2016",
