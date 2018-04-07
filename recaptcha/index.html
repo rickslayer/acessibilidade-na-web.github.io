@@ -1,6 +1,9 @@
 <HTML>
 <head>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+    
 </head>
 <body>
 <form>
@@ -9,4 +12,9 @@
 <div class="g-recaptcha" data-sitekey="6LcyvVEUAAAAAKRYPERRtbkzpOvKhQ8iha3JmHy9"></div>
 </form>
 </body>
+<script type="text/javascript">
+  var onloadCallback = function() {
+    console.log("grecaptcha is ready!");
+  };
+</script>
 </HTML>
