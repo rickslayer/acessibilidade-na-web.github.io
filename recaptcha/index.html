@@ -1,9 +1,11 @@
 <html>
   <head>
-    <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
+    <title>Recaptcha Exemplo</title>
     <script type="text/javascript">
       var verifyCallback = function(response) {
-    	  var data;
+      var data;
+      let resultado = document.getElementById('resultado');
+      let btn       = document.getElementById('btn_envia');
         if(response)
         	{
         		data = {
@@ -11,11 +13,11 @@
         				"success" : true,
         				"message": "Validou com sucesso"
         		}
-        		console.log(data);
+        		console.log(data.success);
         	}
       };
       var onloadCallback = function() {
-          grecaptcha.render('example3', {
+          grecaptcha.render('captcha_elemento', {
           'sitekey' : '6LcyvVEUAAAAAKRYPERRtbkzpOvKhQ8iha3JmHy9',
           'callback' : verifyCallback,
           'theme' : 'light'
@@ -26,12 +28,10 @@
     </script>
   </head>
   <body>
-     <!-- POSTs back to the page's URL upon submit with a g-recaptcha-response POST parameter. -->
-    <form action="?" method="POST">
-      <div id="example3"></div>
-      <br>
-      <input type="submit" value="Submit">
-    </form>
+       
+      <div id="captcha_elemento"></div>
+      <h1 id="resultado"></h1>	
+      <button id="btn_envia">Enviar para o Servidor</button>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
         async defer>
     </script>
